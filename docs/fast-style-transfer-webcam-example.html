@@ -44,7 +44,7 @@
   video.size(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>);
   video.hide();
   <span class="hljs-comment">// Create a TransformNet</span>
-  net = <span class="hljs-keyword">new</span> p5ml.TransformNet(<span class="hljs-string">'models/udnie'</span>, modelLoaded);
+  net = <span class="hljs-keyword">new</span> ml5.TransformNet(<span class="hljs-string">'models/udnie'</span>, modelLoaded);
   <span class="hljs-comment">// Create output image</span>
   outputImgContainer = createImg(<span class="hljs-string">'images/udnie.jpg'</span>, <span class="hljs-string">'image'</span>);
   outputImgContainer.parent(<span class="hljs-string">'output-container'</span>);
@@ -69,7 +69,7 @@
 <span class="hljs-comment">// Transfer the video to an image HTML element</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">predict</span>(<span class="hljs-params"></span>) </span>{
   outputImgData = net.predict(video.elt);
-  outputImg = p5ml.array3DToImage(outputImgData);
+  outputImg = ml5.array3DToImage(outputImgData);
   outputImgContainer.elt.src = outputImg.src;
 }
 

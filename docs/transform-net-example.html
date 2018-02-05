@@ -39,15 +39,15 @@
   outputTwo = select(<span class="hljs-string">'#resultImgTwo'</span>).elt;
 
   <span class="hljs-comment">// Load the models</span>
-  fst1 = <span class="hljs-keyword">new</span> p5ml.TransformNet(<span class="hljs-string">'assets/models/wave'</span>, loadedModelOne);
-  fst2 = <span class="hljs-keyword">new</span> p5ml.TransformNet(<span class="hljs-string">'assets/models/udnie'</span>, loadedModelTwo);
+  fst1 = <span class="hljs-keyword">new</span> ml5.TransformNet(<span class="hljs-string">'assets/models/wave'</span>, loadedModelOne);
+  fst2 = <span class="hljs-keyword">new</span> ml5.TransformNet(<span class="hljs-string">'assets/models/udnie'</span>, loadedModelTwo);
 }
 
 <span class="hljs-comment">// A function to be called when the first model has been loaded</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadedModelOne</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> result = fst1.predict(inputImg);
   <span class="hljs-comment">// Convert the Array3D with image data to a html image element</span>
-  <span class="hljs-keyword">const</span> resultImg = p5ml.array3DToImage(result);
+  <span class="hljs-keyword">const</span> resultImg = ml5.array3DToImage(result);
   <span class="hljs-comment">// Show img</span>
   outputOne.append(resultImg);
 }
@@ -56,7 +56,7 @@
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadedModelTwo</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> result = fst2.predict(inputImg);
   <span class="hljs-comment">// Convert the Array3D with image data to a html image element</span>
-  <span class="hljs-keyword">const</span> resultImg = p5ml.array3DToImage(result);
+  <span class="hljs-keyword">const</span> resultImg = ml5.array3DToImage(result);
   <span class="hljs-comment">// Show img</span>
   outputTwo.append(resultImg);
 }

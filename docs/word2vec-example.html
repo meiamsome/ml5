@@ -53,7 +53,7 @@
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
   createCanvas(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
-  wordVectors = <span class="hljs-keyword">new</span> p5ml.Word2Vec(<span class="hljs-string">'data/wordvecs10000.json'</span>);
+  wordVectors = <span class="hljs-keyword">new</span> ml5.Word2Vec(<span class="hljs-string">'data/wordvecs10000.json'</span>);
 
   <span class="hljs-keyword">let</span> loadHide = select(<span class="hljs-string">"#loadHide"</span>);
   loadHide.hide();
