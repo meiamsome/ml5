@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://itpnyu.github.io/blog</id>
-    <title>p5ML.js Blog</title>
+    <title>ML5.js Blog</title>
     <updated>2016-03-11T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://itpnyu.github.io/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest p5ML.js news and events.</subtitle>
+    <subtitle>The best place to stay up-to-date with the latest ML5.js news and events.</subtitle>
     <logo>https://itpnyu.github.io</logo>
     <entry>
         <title type="html"><![CDATA[Blog Title]]></title>

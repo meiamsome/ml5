@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>p5ML.js Blog</title>
+        <title>ML5.js Blog</title>
         <link>https://itpnyu.github.io/blog</link>
-        <description>The best place to stay up-to-date with the latest p5ML.js news and events.</description>
+        <description>The best place to stay up-to-date with the latest ML5.js news and events.</description>
         <lastBuildDate>Fri, 11 Mar 2016 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
-            <title>p5ML.js Blog</title>
+            <title>ML5.js Blog</title>
             <url>https://itpnyu.github.io</url>
             <link>https://itpnyu.github.io/blog</link>
         </image>
