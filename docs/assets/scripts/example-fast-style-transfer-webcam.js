@@ -29,7 +29,6 @@ function draw() {
 }
 
 function modelLoaded() {
-  console.log('model loaded');
   modelReady = true;
 }
 
