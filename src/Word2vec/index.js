@@ -36,6 +36,7 @@ class Word2Vec {
 
   add(inputs, max = 1) {
     const sum = Word2Vec.addOrSubtract(this.model, inputs, 'ADD');
+    console.log(sum);
     return Word2Vec.nearest(this.model, sum, inputs.length, inputs.length + max);
   }
 
@@ -83,8 +84,10 @@ class Word2Vec {
     }
     let result = vectors[0];
     if (operation === 'ADD') {
-      for (let i = 1; i < vectors.length; i += 1) {
-        result = tf.add(result, vectors[i]);
+      for (let i = 0; i < vectors.length; i += 1) {
+        console.log(result, vectors[i]);
+        let b = tf.add(result, vectors[i]);
+        console.log(b);
       }
     } else {
       for (let i = 1; i < vectors.length; i += 1) {
