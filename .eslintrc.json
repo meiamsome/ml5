@@ -10,5 +10,6 @@
     "env": {
         "browser": true,
         "jasmine": true
-    }
+    },
+    "parser": "babel-eslint"
 }

@@ -8,6 +8,7 @@ Word2Vec
 */
 
 import * as tf from '@tensorflow/tfjs';
+import { callbackFromPromise } from '../utils/callbacks';
 
 class Word2Vec {
   constructor(model, callback) {
@@ -17,8 +18,9 @@ class Word2Vec {
     this.loadModel(model, callback);
   }
 
-  loadModel(file, callback) {
-    fetch(file)
+  @callbackFromPromise
+  async loadModel(file) {
+    const promise = fetch(file)
       .then(response => response.json())
       .then((json) => {
         Object.keys(json.vectors).forEach((word) => {
@@ -26,12 +28,11 @@ class Word2Vec {
         });
         this.modelSize = Object.keys(json).length;
         this.ready = true;
-        if (callback) {
-          callback();
-        }
-      }).catch((error) => {
-        console.error(`There has been a problem loading the vocab: ${error.message}`);
       });
+    promise.catch((error) => {
+      console.error(`There has been a problem loading the vocab: ${error.message}`);
+    });
+    return promise;
   }
 
   dispose() {
